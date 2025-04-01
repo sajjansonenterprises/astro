@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  h1 Numerology Prediction
+  p Welcome to Numerology Prediction
+
+  if error
+    p Error: #{error}
+  else
+    h2 Your Numerology Prediction
+    p Your numerology number is: #{numerologyNumber}
+
+    h3 Static Prediction:
+    p #{prediction}
+
+    h3 AI Insights:
+ 
