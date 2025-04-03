@@ -10,7 +10,7 @@ var usersRouter = require('./routes/users');
 const cors=require("cors")
 var app = express();
 var corsOptions = {
-  origin: 'http://localhost:3000',
+  origin: 'https://astro-guru-self.vercel.app',
   optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
 }
  

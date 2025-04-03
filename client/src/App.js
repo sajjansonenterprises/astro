@@ -218,7 +218,7 @@ const [dobNumerology,setDobNumerology]=useState(null)
   
     try {
       const response = await fetch(
-        `http://localhost/?name=${encodeURIComponent(name)}&mobileNumber=${mobileNumber}&dateOfBirth=${dateOfBirth}&gender=${gender}&placeOfBirth=${encodeURIComponent(placeOfBirth)}`
+        `https://astro-fj9w.onrender.com/?name=${encodeURIComponent(name)}&mobileNumber=${mobileNumber}&dateOfBirth=${dateOfBirth}&gender=${gender}&placeOfBirth=${encodeURIComponent(placeOfBirth)}`
       );
       const data = await response.json();
   
