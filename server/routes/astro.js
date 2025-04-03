@@ -90,7 +90,7 @@ router.get('/', async (req, res) => {
     const aiPrediction = await getAIgeneratedMeaning(nameNumerology, mobileNumberNumerology, dobNumerology, gender, placeOfBirth);
 
     // Combine the base prediction with AI insights
-    const finalPrediction = `${basePrediction} AI Insights: ${aiPrediction}`;
+    const finalPrediction = `${basePrediction} Insights: ${aiPrediction}`;
     const safePrediction = escapeHtml(finalPrediction); // Escape HTML to prevent XSS attacks
 
     // Send response
