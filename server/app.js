@@ -12,7 +12,7 @@ var app = express();
 const allowedOrigins = [
   // 'http://192.168.1.6:3000', 'http://localhost:3000',
   
-  'https://astro-guru-self.vercel.app/'];
+  'https://astro-guru-self.vercel.app'];
 
 const corsOptions = {
   origin: function (origin, callback) {
