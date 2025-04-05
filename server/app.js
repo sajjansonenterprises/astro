@@ -9,10 +9,23 @@ var indexRouter = require('./routes/astro');
 var usersRouter = require('./routes/users');
 const cors=require("cors")
 var app = express();
-var corsOptions = {
-  origin: 'https://astro-guru-self.vercel.app',
-  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
-}
+const allowedOrigins = [
+  // 'http://192.168.1.6:3000', 'http://localhost:3000',
+  
+  'https://astro-guru-self.vercel.app/'];
+
+const corsOptions = {
+  origin: function (origin, callback) {
+    // allow requests with no origin like mobile apps or curl
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  }
+};
+
  
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

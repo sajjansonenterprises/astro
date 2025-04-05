@@ -221,7 +221,7 @@ const [dobNumerology,setDobNumerology]=useState(null)
         `https://astro-fj9w.onrender.com/?name=${encodeURIComponent(name)}&mobileNumber=${mobileNumber}&dateOfBirth=${dateOfBirth}&gender=${gender}&placeOfBirth=${encodeURIComponent(placeOfBirth)}`
       );
       const data = await response.json();
-  
+  console.log(data.prediction)
       if (data.error) {
         setError(data.error);
         setPrediction(null);
