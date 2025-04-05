@@ -177,6 +177,7 @@ router.get('/', async (req, res) => {
 
     const mobilePlanetFrequency = analyzeMobileNumberPlanets(mobileNumber);
 
+
     const basePrediction = numerologyMeanings[mobileNumberNumerology][0];
 
     const aiPrediction = await getAIgeneratedMeaning({
@@ -192,6 +193,7 @@ router.get('/', async (req, res) => {
 
     const finalPrediction = `${basePrediction}. AI Insights: ${aiPrediction}`;
     const safePrediction = escapeHtml(finalPrediction);
+    // Combine the base prediction with AI insights
 
     res.json({
         title: "Advanced Numerology Prediction",
